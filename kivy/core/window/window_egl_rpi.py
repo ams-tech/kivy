@@ -26,7 +26,7 @@ class WindowEglRpi(WindowBase):
 
     _rpi_dispmanx_id = int(environ.get("KIVY_BCM_DISPMANX_ID", "0"))
 
-    def create_window(self):
+    def create_window(self, *args):
         bcm.host_init()
 
         w, h = bcm.graphics_get_display_size(self._rpi_dispmanx_id)
